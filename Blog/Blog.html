@@ -1,73 +1,81 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8"/>
-    <title>Blog</title>
-    <style>
-    #navBar{
-      font-size:24px;
-      line-height: 100px;
-      width: auto;
-      vertical-align: middle;
-      text-align: center;
-    }
-    #navbar .topMenu, ul li {
-      list-style-type: none;
-      float: left;
-      background-color: #2d2d2d;
-    }
-    #navBar .brand{
-      color : #2d2d2d;
-      background-color: #9d9d9d;
-      float: left;
-      width : 150px;
-    }
-    #navBar .topMenu{
-      color : white;
-      list-style-type: none;
-    }
-    #navbar .topMenu, .menuLink
-    {
-      color:white;
-      display:block;
-      width:300px;
-      font-weight: bold;
-    }
-    #navbar .topMenu, .menuLink:hover {
-      color:red;
-      background: #4d4d4d;
-    }
-
-    #maincContent{
-
-    }
-    </style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
 </head>
 <body>
-  <div id = "navBar">
-    <div class="brand">
-      <text>BLOG</text>
-    </div>
-    <div class = "topMenu">
-      <ul>
-        <li><a class ="menuLink" href="#">Home</a></li>
-        <li><a class ="menuLink" href="Login_Page.html">Login/Join</a></li>
-        <li><a class ="menuLink" href="#">Setting</a></li>
-      </ul>
-    </div>
-  </div>
-  <div id = "mainContent">
-    <div>
-      <br>
-      <img>
-      text<br>
-      category<br>
-    </div>
-    <div>
-      <img>
-      combobox<br>
-      content<br>
-    </div>
-  </div>
+<!-- 상단 네비게이션 바 -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- 브라우저가 좁아졋을때 나오는 버튼(클릭시 메뉴출력) -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">BLOG</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">HOME</a></li>
+            <li><a href="#setting">SETTING</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+           <li><a href="signUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+           <li><a href="Login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+         </ul>
+        </div>
+      </div>
+</div>
+<div class="container">
+    <div class="row profile" style="margin-top : 100px">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="./image/profile.png" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						Name
+					</div>
+					<div class="profile-usertitle-job">
+						Job
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR BUTTONS -->
+        <div class="form-group has-info">
+          <label class="control-label" for="inputInfo">Intro</label>
+          <input type="text" class="form-control" id="inputInfo">
+        </div>
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+        <div class="gw-sidebar">
+          <h2>Category</h2>
+          <ul class="list-group">
+            <li class="list-group-item">Category 1 <span class="badge">12</span></li>
+            <li class="list-group-item">Category 2 <span class="badge">5</span></li>
+            <li class="list-group-item">Category 3 <span class="badge">3</span></li>
+          </ul>
+        </div>
+				<!-- END MENU -->
+			</div>
+		</div>
+		<div class="col-md-9">
+            <div class="profile-content">
+			          이것은 글 입니다.
+            </div>
+		</div>
+	</div>
+</div>
 </body>
 </html>
