@@ -17,6 +17,13 @@
     if (val == 3)
       location.href = "Register.php";
   }
+  function setDisable(elementid) {
+				alert("\"" + elementid +"\"를 누르셨습니다.");
+				var el = document.getElementById(elementid);
+				//alert(el);
+        //el.setDisable = true;
+				el.disabled = true;
+			}
 </script>
 </head>
 <body>
@@ -28,27 +35,27 @@
                         <h3 class="panel-title">Sign Up</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form" method = "post" action="?">
+                        <form role="form" method = "post" action="Register.php">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="ID" name="id" type="id" autofocus><br>
+                                    <input class="form-control" placeholder="ID" name="id_" id="id_" type="id" autofocus><br>
                                     <input type="button" class="btn btn-info btn-block" value="ID 중복 확인" onclick=Router(1) ></input>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="별명" name="nickname" type="nickname"><br>
+                                    <input class="form-control" placeholder="별명" name="nickname" type="text"><br>
                                     <input type="button" class="btn btn-info btn-block" onclick=Router(2) value="닉네임 중복 확인"></input>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="password" type="password" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password 확인" name="password_check" type="password_check" value="">
+                                    <input class="form-control" placeholder="Password 확인" name="password_check" type="password" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="연락처" name="phone_number" type="phone_number" value="">
+                                    <input class="form-control" placeholder="연락처(xxx-xxxx-xxxx)" name="phone_number" type="text" value="">
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <input type="button" class="btn btn-info btn-block" value="회원 가입" onclick=Router(3)></input>
+                                <input type="submit" id="creat_btn"  class="btn btn-info btn-block" value="회원 가입" onclick="Router(3)"></input>
                             </fieldset>
                         </form>
                     </div>
